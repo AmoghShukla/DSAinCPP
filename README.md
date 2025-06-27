@@ -22,14 +22,23 @@ A comprehensive repository containing solved problems and concepts related to **
 ## 📂 Folder Structure (to be populated)
 
 DSAinCPP/
+
 ├── Arrays/
+
 ├── Strings/
+
 ├── LinkedLists/
+
 ├── Trees/
+
 ├── Graphs/
+
 ├── DP/
+
 ├── Recursion/
+
 ├── Sorting/
+
 └── Patterns/
 
 
