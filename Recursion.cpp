@@ -68,10 +68,29 @@ bool pallindrome(int i, string &s){
     if(s[i] != s[s.size() - i - 1])return false;
     return pallindrome(i+1,s);
 }
+void simple_fibonacci(int n){
+    vector <int> f(n+1);
+    f[0] = 0;
+    if (n > 0) f[1] = 1;
+    for (int i = 2; i <=n; i++){
+        f[i] = f[i-1] + f[i-2];
+    }
+    for (int i = 0; i <= n; i++) {
+        cout << f[i] << " ";
+    }
+    cout << endl;
+    
+}
+int recursive_fibonacci(int n){
+    if (n <= 1) 
+    return n;
+    int last = recursive_fibonacci(n-1);
+    int second_last = recursive_fibonacci(n-2);
+    return last + second_last;
+}
 
 
-int main() {
-    string s = "madam";
-    cout << pallindrome(1, s);
+int main(){
+    cout << recursive_fibonacci(3);
     return 0;
 }
