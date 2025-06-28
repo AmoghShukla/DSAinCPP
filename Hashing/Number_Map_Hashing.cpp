@@ -17,6 +17,12 @@ int main(){
         mpp[arr[i]] += 1;
     }
 
+    // initialize the unordered map
+    // unordered_map <int, int> mpp;
+    // for(int i=0; i<n; i++){
+    //     mpp[arr[i]] += 1; 
+    // }
+
     // Additional feature to iterate in map
     // for(auto it : mpp){
     //     cout << it.first << " : " << it.second << endl;
