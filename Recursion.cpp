@@ -6,13 +6,11 @@ void Recursion_Example(){
     if (counter == 5) return;
     cout << counter << endl;
     counter++;
-    Recursion_Example();
-}
+    Recursion_Example();}
 void Name_n_times(int i, int n){
     if (i > n) return;
     cout << "Amogh" << endl;
     Name_n_times(i + 1, n);
-
 }
 void Num_n_times(int i, int n) {
     if (i > n) return;
@@ -66,8 +64,7 @@ int swap_arr(int i, int arr[], int n){
 bool pallindrome(int i, string &s){
     if (i > s.size() / 2) return true;
     if(s[i] != s[s.size() - i - 1])return false;
-    return pallindrome(i+1,s);
-}
+    return pallindrome(i+1,s);}
 void simple_fibonacci(int n){
     vector <int> f(n+1);
     f[0] = 0;
@@ -91,6 +88,8 @@ int recursive_fibonacci(int n){
 
 
 int main(){
-    cout << recursive_fibonacci(3);
+    int n;
+    cin >> n;
+    cout << Factorial(n, 1);
     return 0;
 }
