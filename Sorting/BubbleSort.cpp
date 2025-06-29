@@ -14,6 +14,7 @@ void BubbleSort(int arr[], int n){
         }
         if (didSwap == 0) break;
     }
+    cout << "runs: " << n << endl;
 
 }
 
