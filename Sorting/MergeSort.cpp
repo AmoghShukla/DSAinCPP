@@ -24,7 +24,7 @@ void Merge(vector<int>& arr, int low, int mid, int high){
         right++;
     }
     for(int i = low; i <= high; i++){
-        arr[i] = temp[i-low];
+        arr[i] = temp[i-low]; // temp[i-low] gives the correct index in temp as temp starts from 0 and arr starts from low so the offset is needed
     }
 }
 
