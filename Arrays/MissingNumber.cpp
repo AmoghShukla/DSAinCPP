@@ -7,7 +7,7 @@ int MissingNumber(vector<int>& arr, int n){
     for(int i = 0; i < n-1; i++){
         Sum2 += arr[i];
     }
-    return Sum - Sum2;
+    return Sum - Sum2; // The missing number is the difference between the expected sum and the actual sum
 }
 
 int main(){
