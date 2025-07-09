@@ -2,7 +2,7 @@
 using namespace std;
 
 int maxSubArray(vector<int>& nums) {
-        int maxi = INT_MIN;
+        int maxi = LONG_MIN;
         int sum = 0;        
         for(int i=0; i<nums.size(); i++){
             sum += nums[i];
