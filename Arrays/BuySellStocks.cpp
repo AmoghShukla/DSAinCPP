@@ -2,17 +2,17 @@
 using namespace std;
 
 int MaxProfit(vector<int>& arr, int n){
-    int maxprofit = 0;
+    int max_profit = 0;
     int mini = arr[0];
     for(int i = 1; i < n; i++){
         if(arr[i] < mini){
             mini = arr[i];
         }
         else{
-            maxprofit = max(maxprofit, arr[i] - mini);
+            max_profit = max(max_profit, arr[i] - mini);
         }
     }
-    return maxprofit;
+    return max_profit;
 }
 
 int main(){
