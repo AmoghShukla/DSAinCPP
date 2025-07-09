@@ -27,10 +27,10 @@ int main() {
         cin >> arr[i];
     }
 
-    vector<int> rearranged = rearrangeArray(arr);
+    vector<int> arranged = rearrangeArray(arr);
     cout << "Rearranged array: ";
     for (int i = 0; i < n; i++) {
-        cout << rearranged[i] << " ";
+        cout << arranged[i] << " ";
     }
     cout << endl;
 
