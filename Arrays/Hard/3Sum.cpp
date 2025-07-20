@@ -32,7 +32,12 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 }
 
 int main() {
-    vector<int> nums = {-1, 0, 1, 2, -1, -4};
+    int n;
+    cin >> n;
+    vector<int> nums(n);
+    for(int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
     vector<vector<int>> result = threeSum(nums);
 
     cout << "Triplets that sum to zero:" << endl;
