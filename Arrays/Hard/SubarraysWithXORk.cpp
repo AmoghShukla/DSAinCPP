@@ -1,11 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int subarraywithXORk(vector<int>& arr, int k){
+int subarraywithXORk(vector<int>& arr, int k){\
+    // This function counts the number of subarrays with XOR equal to k
     int xr = 0;
+    // xr will hold the prefix XOR
+    // Initialize a map to store the frequency of prefix XOR values
     int cnt = 0;
+    // cnt will hold the count of subarrays with XOR equal to k
+    // Initialize the map with the prefix XOR of 0
     map<int, int> mpp;
     mpp[xr]++;
+    // Increment the count of prefix XOR 0 to handle the case when a subarray itself has XOR equal to k
     for(int i = 0; i < arr.size(); i++){
         // Calculate the prefix XOR
         xr ^= arr[i];
@@ -16,6 +22,7 @@ int subarraywithXORk(vector<int>& arr, int k){
         // Increment the count of the current prefix XOR in the map
         mpp[xr]++;
     }
+    // Return the total count of subarrays with XOR equal to k
     return cnt;
 }
 

@@ -26,7 +26,7 @@ vector<int> findDuplicateAndMissing(vector<vector<int>>& grid) {
 int main() {
     int n;
     cin >> n;
-    vector<vector<int>> grid(n, vector<int>(n));
+    vector<vector<int>> grid(n, vector<int>(n)); // Initialize a 2D vector of size n x n, Creating a kind of stack of lists.
     
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
