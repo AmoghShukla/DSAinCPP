@@ -5,6 +5,17 @@ int Minimum(vector<int>& arr, int n){
     int low = 0, high = n-1, ans = INT_MAX;
     while(low <= high){
         int mid = low + (high - low) / 2;
+
+        // Update After Once Coded (extremely Temprory part can add or not )
+
+        // If the search space is already sorted
+        // then arr[low] is the always the minimum
+        // so we can return it directly
+        if(arr[low] < arr[high]){
+            ans = min(ans, arr[low]);
+        }
+
+
         if(arr[low] <= arr[mid]){
             ans = min(ans, arr[low]); // Update answer with minimum found so far
             high = mid - 1; // Search in the left half
