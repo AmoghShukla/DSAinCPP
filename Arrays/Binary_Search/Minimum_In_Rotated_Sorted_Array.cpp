@@ -13,6 +13,7 @@ int Minimum(vector<int>& arr, int n){
         // so we can return it directly
         if(arr[low] < arr[high]){
             ans = min(ans, arr[low]);
+            break; // Exit the loop as we found the minimum
         }
 
 
