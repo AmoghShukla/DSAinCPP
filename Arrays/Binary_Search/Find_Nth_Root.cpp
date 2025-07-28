@@ -1,29 +1,24 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-long long fun(int mid, int n){
-    long long answer = 1;
-    while(n > 0){
-        if(n % 2 == 1){
-            answer *= mid;
-            if(answer > 1e18) return LLONG_MAX; // overflow guard
-            n -= 1;
-        } else {
-            mid = mid * mid;
-            if(mid > 1e9) return LLONG_MAX; // avoid overflow
-            n /= 2;
-        } 
+int fun(int mid, int n, int m){
+    long long ans = 1;
+    for(int i = 0; i<n; i++){
+        ans *= mid;
+        if(ans > m) return 2; // Early exit if product exceeds m 
     }
-    return answer;
+    if (ans == m) return 1; // Found the nth root
+    return 0; // Not found
+
 }
 
 int findNthRoot(int n, int m){
     int low = 1, high = m;
     while(low <= high){
         int mid = (low + high) / 2;
-        long long midN = fun(mid, n);  // ✅ Fixed type here
-        if (midN == m) return mid;
-        else if (midN < m) low = mid + 1;
+        int midN = fun(mid, n, m);  
+        if (midN == 1) return mid;
+        else if (midN == 0) low = mid + 1;
         else high = mid - 1;
     }
     return -1; // Not found
