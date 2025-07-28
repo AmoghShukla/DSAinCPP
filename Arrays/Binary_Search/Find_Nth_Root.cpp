@@ -3,11 +3,14 @@ using namespace std;
 
 int fun(int mid, int n){
     long long answer = 1;
-    for(int i = 0; i< n; i++){
-        answer *= mid;
-        if (answer > INT_MAX) {
-            return 0; // Avoid overflow
-        }
+    while(n > 0){
+        if(n % 2 == 1){
+            answer *= mid;
+            n -= 1;
+        } else {
+            mid = mid * mid;
+            n /= 2;
+        } 
     }
     return answer;
 }
@@ -16,8 +19,9 @@ int findNthRoot(int n, int m){
     int low = 1, high = m;
     while(low <= high){
         int mid = (low + high) / 2;
-        if (fun(mid, n) == m) return mid;
-        else if (fun(mid, n) < m) low = mid + 1;
+        int midN = fun(mid, n);
+        if (midN == m) return mid;
+        else if (midN < m) low = mid + 1;
         else high = mid - 1;
     }
     return -1; // Not found
