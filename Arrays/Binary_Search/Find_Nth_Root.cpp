@@ -1,14 +1,16 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int fun(int mid, int n){
+long long fun(int mid, int n){
     long long answer = 1;
     while(n > 0){
         if(n % 2 == 1){
             answer *= mid;
+            if(answer > 1e18) return LLONG_MAX; // overflow guard
             n -= 1;
         } else {
             mid = mid * mid;
+            if(mid > 1e9) return LLONG_MAX; // avoid overflow
             n /= 2;
         } 
     }
@@ -19,7 +21,7 @@ int findNthRoot(int n, int m){
     int low = 1, high = m;
     while(low <= high){
         int mid = (low + high) / 2;
-        int midN = fun(mid, n);
+        long long midN = fun(mid, n);  // ✅ Fixed type here
         if (midN == m) return mid;
         else if (midN < m) low = mid + 1;
         else high = mid - 1;
