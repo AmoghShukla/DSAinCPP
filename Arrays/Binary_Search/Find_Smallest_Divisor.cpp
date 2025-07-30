@@ -21,3 +21,11 @@ int SmallestDivisor(vector<int>& arr, int threshold){
     }
     return low;
 }
+
+int main(){
+    vector<int> arr = {1, 2, 5, 9};
+    int threshold = 6;
+    int result = SmallestDivisor(arr, threshold);
+    cout << "Smallest Divisor: " << result << endl;
+    return 0;
+}
