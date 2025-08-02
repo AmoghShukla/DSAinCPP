@@ -1,9 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int fun(int mid, int n, int m){
+int fun(int mid, int o, int m){
     long long ans = 1;
-    for(int i = 0; i<n; i++){
+    for(int i = 0; i<o; i++){
         ans *= mid;
         if(ans > m) return 2; // Early exit if product exceeds m 
     }
