@@ -7,14 +7,14 @@ vector<vector<int>> threeSum(vector<int>& nums) {
     int n = nums.size();
 
     for(int i = 0; i < n; i++) {
-        if(i > 0 && nums[i] == nums[i - 1]) continue;
+        if(i > 0 && nums[i] == nums[i - 1]) continue; // i > 0 because we want to avoid duplicates
 
         int j = i + 1;
         int k = n - 1;
 
         while(j < k) {
             int sum = nums[i] + nums[j] + nums[k];
-            if(sum < 0) {
+            if(sum < 0) { 
                 j++;
             } else if(sum > 0) {
                 k--;
