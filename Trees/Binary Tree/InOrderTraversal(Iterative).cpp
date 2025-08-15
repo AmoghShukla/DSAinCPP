@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// Creating the binary tree node structure
 struct TreeNode {
     int val;
     TreeNode* left;
@@ -9,8 +10,8 @@ struct TreeNode {
 };
 
 vector<int> inorderTraversal(TreeNode* root) {
-        vector<int> ans;
-        stack<TreeNode*> st;
+        vector<int> ans; // Vector to store the inorder traversal
+        stack<TreeNode*> st; // Stack to store the nodes
         TreeNode* node = root;
         while(true){
             if (node != NULL){
