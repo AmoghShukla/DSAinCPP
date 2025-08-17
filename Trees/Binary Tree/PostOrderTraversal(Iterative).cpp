@@ -32,15 +32,15 @@ vector<int> postorderTraversal(TreeNode* root) {
 }
 
 int main(){
-    TreeNode* root = new TreeNode();
-    root->val = 1;
-    root->left = new TreeNode();
-    root->left->val = 2;
-    root->right = new TreeNode();
-    root->right->val = 3;
-    vector<int> result = postorderTraversal(root);
-    for (int i : result) {
-        cout << i << " ";
+    TreeNode* root = new TreeNode(); // Here a new TreeNode is created which will be the root of the binary tree
+    root->val = 1; // The value of the root node is set to 1
+    root->left = new TreeNode(); // Here a new TreeNode is created which will be the left child of the root
+    root->left->val = 2; // The value of the left child is set to 2
+    root->right = new TreeNode(); // Here a new TreeNode is created which will be the right child of the root
+    root->right->val = 3; // The value of the right child is set to 3
+    vector<int> result = postorderTraversal(root); // The postorder traversal of the binary tree is obtained here
+    for (int i : result) { // Iterate through the result vector
+        cout << i << " "; // Print each value followed by a space
     }
-    return 0;
+    return 0; 
 }
