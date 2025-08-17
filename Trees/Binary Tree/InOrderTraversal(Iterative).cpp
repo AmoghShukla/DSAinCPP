@@ -27,6 +27,8 @@ vector<int> inorderTraversal(TreeNode* root) {
                 node = node->right; // Move to the right child
             }
         }
+        // Return the result vector containing the inorder traversal
+        // The traversal visits nodes in the order: left, root, right
         return ans;
     }
 
