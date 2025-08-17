@@ -19,10 +19,11 @@ vector<int> preOrderTraversal(TreeNode* root) {
     stack<TreeNode*> s;
     s.push(root);
 
+    // Iterative Pre-Order Traversal
     while (!s.empty()) {
-        TreeNode* node = s.top();
-        s.pop();
-        result.push_back(node->val);
+        TreeNode* node = s.top(); // Locate the current node
+        s.pop(); // Remove the current node from the stack
+        result.push_back(node->val); // Add the current node's value to the result
 
         // Push right child first so that left child is processed first
         if (node->right != NULL) s.push(node->right);
