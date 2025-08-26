@@ -11,7 +11,7 @@ struct TreeNode{
         right = NULL;
     }
 
-}
+};
 
 bool isSymmetric(TreeNode* root){
     return root == NULL || isMirror(root->left, root->right);
