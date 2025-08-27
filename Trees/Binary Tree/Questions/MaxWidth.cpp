@@ -38,3 +38,14 @@ int widthOfBinaryTree(TreeNode* root) {
     return (int)ans;
 }
 
+
+int main() {
+    TreeNode* root = new TreeNode(1);
+    root->left = new TreeNode(3);
+    root->right = new TreeNode(2);
+    root->left->left = new TreeNode(5);
+
+    cout << "Maximum Width of Binary Tree: " << widthOfBinaryTree(root) << endl;
+
+    return 0;
+}
