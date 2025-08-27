@@ -44,6 +44,9 @@ int main() {
     root->left = new TreeNode(3);
     root->right = new TreeNode(2);
     root->left->left = new TreeNode(5);
+    root->right->right = new TreeNode(9);
+    root->left->left->left = new TreeNode(6);
+    root->right->right->right = new TreeNode(7);
 
     cout << "Maximum Width of Binary Tree: " << widthOfBinaryTree(root) << endl;
 
