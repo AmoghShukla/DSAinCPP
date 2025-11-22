@@ -23,13 +23,9 @@ TreeNode* buildTreePostIn(vector<int>& inorder, int is, int ie,
     int inRoot = hm[postorder[pe]];
     int numsLeft = inRoot - is;
     
-    root->left = buildTreePostIn(inorder, is, inRoot - 1,
-                                 postorder, ps, ps + numsLeft - 1,
-                                 hm);
+    root->left = buildTreePostIn(inorder, is, inRoot - 1, postorder, ps, ps + numsLeft - 1, hm);
     
-    root->right = buildTreePostIn(inorder, inRoot + 1, ie,
-                                  postorder, ps + numsLeft, pe - 1,
-                                  hm);
+    root->right = buildTreePostIn(inorder, inRoot + 1, ie, postorder, ps + numsLeft, pe - 1, hm);
     
     return root;
 }
