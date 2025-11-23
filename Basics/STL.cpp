@@ -1,3 +1,6 @@
+// STL means Standard Template Library
+// It is a powerful set of C++ template classes to provide general-purpose classes and functions with
+
 // Pairs
 
 // Pairs are used to store two values of different data types.
